@@ -10,18 +10,9 @@ type Card = {
 };
 
 const CardContainer: React.FunctionComponent<{
-  hrefLink?: string;
   children: any;
   setActive: () => void;
-}> = ({ hrefLink, children, setActive }) => {
-  //   if (hrefLink) {
-  //     return <div style={{ cursor: "pointer" }}>{children}</div>;
-  //     //   return (
-  //     //     // <a href={hrefLink} target="_blank">
-  //     //       {children}
-  //     //     // </a>
-  //     //   );
-  //   }
+}> = ({ children, setActive }) => {
   return (
     <div style={{ cursor: "pointer" }} onClick={() => setActive()}>
       {children}
@@ -39,10 +30,7 @@ export const Card: React.FunctionComponent<Card> = ({
   completed,
 }) => {
   return (
-    <CardContainer
-      hrefLink={enabled ? hrefLink : undefined}
-      setActive={() => setActive(index)}
-    >
+    <CardContainer setActive={() => setActive(index)}>
       <div className={classNames("card", { disabled: !enabled })}>
         <div className="header">
           {completed ? "✅" : "◻️"}
