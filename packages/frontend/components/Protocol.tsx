@@ -112,7 +112,7 @@ export const Protocol: React.FunctionComponent<{ slug: string }> = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const protocol = protocols.find((protocol) => protocol.slug === slug);
   if (protocol === undefined) {
-    return "not found";
+    return <>"not found"</>;
   }
   return (
     <div style={{ width: "500px" }}>
