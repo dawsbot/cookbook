@@ -82,10 +82,39 @@ const lensProtocol: Protocol = {
     },
   ],
 };
+const ghoProtocol: Protocol = {
+  slug: "gho",
+  title: "Stake ETH for GHO",
+  categories: ["DeFi", "solo"],
+  description:
+    "Use Aave to stake the Ethereum for GHO, currently only on the Sepolia Test Net.",
+  steps: [
+    {
+      title: "Connect a wallet",
+      description: "Ensure this wallet has Sepolia Test ETH",
+      href: "https://gho.aave.com/?marketName=proto_sepolia_gho_v3",
+    },
+    {
+      title: "Switch to Sepolia",
+      description: "Staking GHO is currently only available on Sepolia Testnet",
+      href: "https://chainlist.org/chain/11155111",
+    },
+    {
+      title: "Enter Amount & Supply ETH",
+      description: "Or choose “MAX” to add all available ETH to the supply",
+      href: "https://gho.aave.com/?marketName=proto_sepolia_gho_v3",
+    },
+    {
+      title: "Add Token to Wallet",
+      description: "Select “Add to wallet” and “Add token”",
+    },
+  ],
+};
 export const protocols: ReadonlyArray<Protocol> = [
   safeProtocol,
   uniswapProtocol,
   lensProtocol,
+  ghoProtocol,
 ];
 type PillProps = {
   category: string;
