@@ -110,11 +110,40 @@ const ghoProtocol: Protocol = {
     },
   ],
 };
+const ipfsProtocol: Protocol = {
+  slug: "ipfs",
+  title: "Publish a file to ipfs",
+  categories: ["solo"],
+  description:
+    "The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable",
+  steps: [
+    {
+      title: "Open Terminal",
+      description: 'On a mac or Linux, this is a program called "Terminal"',
+    },
+    {
+      title: "Locate or Create the File",
+    },
+    {
+      title: "Pin a file with `ipfs add YOUR_FILE_HERE`",
+      description:
+        "Pinning is the mechanism that allows you to tell IPFS to always keep a given object local.",
+      href: "https://dweb-primer.ipfs.io/files-on-ipfs/pin-files",
+    },
+    {
+      title: "Start daemon with `ipfs daemon`",
+      description:
+        "You have to run the IPFS daemon in order to have your local IPFS node become part of the IPFS network and listen to other IPFS peers.",
+      href: "https://dweb-primer.ipfs.io/going-online/connect-your-node",
+    },
+  ],
+};
 export const protocols: ReadonlyArray<Protocol> = [
   safeProtocol,
   uniswapProtocol,
   lensProtocol,
   ghoProtocol,
+  ipfsProtocol,
 ];
 type PillProps = {
   category: string;
