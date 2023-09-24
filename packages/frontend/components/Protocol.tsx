@@ -82,13 +82,13 @@ const Pill: React.FunctionComponent<PillProps> = ({ category, index }) => {
 export const Protocol: React.FunctionComponent<{ slug: string }> = ({
   slug,
 }) => {
-  const [activeIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const protocol = protocols.find((protocol) => protocol.slug === slug);
   if (protocol === undefined) {
     return "not found";
   }
   return (
-    <>
+    <div style={{ width: "500px" }}>
       <h1>{protocol.title}</h1>
       <p>{protocol.description}</p>
       <div style={{ display: "flex" }}>
@@ -99,14 +99,16 @@ export const Protocol: React.FunctionComponent<{ slug: string }> = ({
       {protocol.steps.map((step, index) => {
         return (
           <Card
+            completed={index < activeIndex}
             title={step.title}
             index={index}
             hrefLink={step.href}
             description={step.description}
             enabled={index === activeIndex}
+            setActive={() => setActiveIndex(index)}
           />
         );
       })}
-    </>
+    </div>
   );
 };
