@@ -61,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider coolMode chains={chains}>
         <NextHead>
-          <title>create-web3</title>
+          <title>Cook Book</title>
         </NextHead>
         <header>
           {/* <ConnectButton /> */}
