@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                     borderRadius: "16px",
                     border: "1px solid black",
                     display: "inline-block",
-                    margin: "0px 20px",
+                    margin: "0px 10px",
                     cursor: "pointer",
                   }}
                 >
