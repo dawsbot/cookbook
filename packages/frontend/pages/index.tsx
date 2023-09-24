@@ -25,6 +25,7 @@ const Home: NextPage = () => {
         <>
           <h2>Latest Recipes</h2>
           {protocols.map((protocol, index) => {
+            const colorIndex = index % 3;
             return (
               <Link href={`/recipe/${protocol.slug}`}>
                 <div
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
                     borderRadius: "16px",
                     border: "1px solid black",
                     display: "inline-block",
-                    margin: "0px 10px",
+                    margin: "14px 14px",
                     cursor: "pointer",
                     width: "400px",
                   }}
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
                       height: "80px",
                       borderTopLeftRadius: "16px",
                       borderTopRightRadius: "16px",
-                      backgroundColor: colorOptions[index],
+                      backgroundColor: colorOptions[colorIndex],
                     }}
                   />
                   <div style={{ padding: "0px 30px 30px 30px" }}>

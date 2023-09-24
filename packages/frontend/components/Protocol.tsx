@@ -196,8 +196,8 @@ export const protocols: ReadonlyArray<Protocol> = [
   uniswapProtocol,
   lensProtocol,
   ghoProtocol,
-  ipfsProtocol,
   baseProtocol,
+  ipfsProtocol,
   acrossProtocol,
 ];
 type PillProps = {
