@@ -23,7 +23,7 @@ button {
 .card {
   border: 1px solid black;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px;
   margin: 20px;
   min-width: 300px;
   max-width: 500px;
@@ -32,6 +32,7 @@ button {
 .header {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .disabled {
