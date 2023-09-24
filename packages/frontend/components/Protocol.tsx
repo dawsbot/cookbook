@@ -39,7 +39,8 @@ const uniswapProtocol: Protocol = {
   slug: "uniswap",
   title: "Swap your first tokens on Celo",
   categories: ["celo", "DeFi", "solo"],
-  description: "Celo",
+  description:
+    "Celo's ecosystem ensures seamless composability across systems, so you never have to worry about fragmented systems or sharded chains",
   steps: [
     {
       title: "Switch the network to Celo",
@@ -59,9 +60,32 @@ const uniswapProtocol: Protocol = {
     },
   ],
 };
+const lensProtocol: Protocol = {
+  slug: "lens",
+  title: "Get social on Lenster",
+  categories: ["social", "lens"],
+  description:
+    "Lenster is a decentralized, and permissionless social media app built with Lens Protocol ",
+  steps: [
+    {
+      title: "Login on Lenster",
+      href: "https://lenster.xyz/",
+    },
+    {
+      title: "Follow someone",
+      href: "https://lenster.xyz/u/levychain",
+    },
+    {
+      title: "Create a post",
+      description:
+        "Express your thoughts! Anything you think people will like to see",
+    },
+  ],
+};
 export const protocols: ReadonlyArray<Protocol> = [
   safeProtocol,
   uniswapProtocol,
+  lensProtocol,
 ];
 type PillProps = {
   category: string;
