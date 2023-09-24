@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <div
       style={{
+        paddingTop: "100px",
         display: "flex",
-        alignItems: "center",
         justifyContent: "center",
       }}
     >
@@ -20,37 +20,36 @@ const Home: NextPage = () => {
             "https://em-content.zobj.net/source/apple/354/man-cook-light-skin-tone_1f468-1f3fb-200d-1f373.png"
           }
         />
-      </div>
-      <br />
-      <>
-        <h2>Latest Recipes</h2>
-        {protocols.map((protocol, index) => {
-          return (
-            <Link href={`/recipe/${protocol.slug}`}>
-              <div
-                style={{
-                  borderRadius: "16px",
-                  border: "1px solid black",
-                  display: "inline-block",
-                  margin: "0px 20px",
-                  // padding: "0px 20px",
-                  cursor: "pointer",
-                }}
-              >
+        <br />
+        <>
+          <h2>Latest Recipes</h2>
+          {protocols.map((protocol, index) => {
+            return (
+              <Link href={`/recipe/${protocol.slug}`}>
                 <div
                   style={{
-                    height: "80px",
-                    borderTopLeftRadius: "16px",
-                    borderTopRightRadius: "16px",
-                    backgroundColor: colorOptions[index],
+                    borderRadius: "16px",
+                    border: "1px solid black",
+                    display: "inline-block",
+                    margin: "0px 20px",
+                    cursor: "pointer",
                   }}
-                />
-                <h2 style={{ padding: "0px 30px" }}>{protocol.title}</h2>
-              </div>
-            </Link>
-          );
-        })}
-      </>
+                >
+                  <div
+                    style={{
+                      height: "80px",
+                      borderTopLeftRadius: "16px",
+                      borderTopRightRadius: "16px",
+                      backgroundColor: colorOptions[index],
+                    }}
+                  />
+                  <h2 style={{ padding: "0px 30px" }}>{protocol.title}</h2>
+                </div>
+              </Link>
+            );
+          })}
+        </>
+      </div>
     </div>
   );
 };
