@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import { colorOptions, protocols } from "../components/Protocol";
+import { colorOptions } from "../components/Protocol";
 import Link from "next/link";
+import { protocols } from "../components/protocol-data";
 
 const Home: NextPage = () => {
   return (
