@@ -10,6 +10,7 @@ const Home: NextPage = () => {
         paddingTop: "100px",
         display: "flex",
         justifyContent: "center",
+        paddingLeft: "140px",
       }}
     >
       <div>
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
                     display: "inline-block",
                     margin: "0px 10px",
                     cursor: "pointer",
+                    width: "400px",
                   }}
                 >
                   <div
@@ -43,7 +45,10 @@ const Home: NextPage = () => {
                       backgroundColor: colorOptions[index],
                     }}
                   />
-                  <h2 style={{ padding: "0px 30px" }}>{protocol.title}</h2>
+                  <div style={{ padding: "0px 30px 30px 30px" }}>
+                    <h2>{protocol.title}</h2>
+                    {protocol.description}
+                  </div>
                 </div>
               </Link>
             );

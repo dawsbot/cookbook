@@ -113,7 +113,7 @@ const ghoProtocol: Protocol = {
 const ipfsProtocol: Protocol = {
   slug: "ipfs",
   title: "Publish a file to ipfs",
-  categories: ["solo"],
+  categories: ["solo", "developer"],
   description:
     "The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable",
   steps: [
@@ -138,12 +138,36 @@ const ipfsProtocol: Protocol = {
     },
   ],
 };
+const baseProtocol: Protocol = {
+  slug: "base",
+  title: "Try Base with friend.tech",
+  categories: ["BASE", "social", "DeFi"],
+  description: "friend.tech is a crypto-powered social network",
+  steps: [
+    {
+      title: "Open The Website",
+      href: "https://friend.tech",
+    },
+    {
+      title: "Use an Invite Code",
+      description:
+        "If you have friends on the platform, ask them. Otherwise here are a few: ft-s8i5r6ql, ft-40uhiuwa, ft-r8r4mnnx",
+    },
+    { title: "Connext your Twitter" },
+    {
+      title: "Purchase Keys",
+      description:
+        "By owning a key, you get access to someone's chat room. This is the most important part of the platform!",
+    },
+  ],
+};
 export const protocols: ReadonlyArray<Protocol> = [
   safeProtocol,
   uniswapProtocol,
   lensProtocol,
   ghoProtocol,
   ipfsProtocol,
+  baseProtocol,
 ];
 type PillProps = {
   category: string;
