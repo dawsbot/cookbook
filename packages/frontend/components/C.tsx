@@ -1,5 +1,7 @@
+import classNames from "classnames";
 type Card = {
   title: string;
+  enabled: boolean;
   index: number;
   hrefLink?: string;
   description?: string;
@@ -18,19 +20,20 @@ const CardContainer: React.FunctionComponent<{
   }
   return children;
 };
+
 export const Card: React.FunctionComponent<Card> = ({
   title,
   index,
   description,
   hrefLink,
+  enabled,
 }) => {
   return (
-    <CardContainer hrefLink={hrefLink}>
-      <div className="card">
+    <CardContainer hrefLink={enabled ? hrefLink : undefined}>
+      <div className={classNames("card", { disabled: !enabled })}>
         <div className="header">
           👨🏻‍🍳 {index + 1}. {title}
         </div>
-        <hr />
         {description ? <div>{description}</div> : null}
       </div>
     </CardContainer>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card } from "./C";
 type Step = {
   title: string;
@@ -31,6 +32,7 @@ const steps: Protocol = {
   ],
 };
 export const Protocol: React.FunctionComponent = () => {
+  const [activeIndex] = useState(0);
   return (
     <>
       <h1>{steps.title}</h1>
@@ -42,6 +44,7 @@ export const Protocol: React.FunctionComponent = () => {
             index={index}
             hrefLink={step.href}
             description={step.description}
+            enabled={index === activeIndex}
           />
         );
       })}
