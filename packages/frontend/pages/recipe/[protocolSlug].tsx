@@ -6,7 +6,7 @@ export default function Home() {
   const router = useRouter();
   const protocolSlug = router.query.protocolSlug;
   if (typeof protocolSlug !== "string") {
-    return "protocol not found";
+    return <>protocol not found</>;
   }
   return (
     <div className={""}>
