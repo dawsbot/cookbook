@@ -6,13 +6,15 @@ type Step = {
   description?: string;
 };
 type Protocol = {
+  slug: string;
   title: string;
   categories: ReadonlyArray<string>;
   description: string;
   steps: ReadonlyArray<Step>;
 };
 
-const steps: Protocol = {
+const safeProtocol: Protocol = {
+  slug: "safe",
   title: "Create a personal Multisig",
   categories: ["security", "solo"],
   description:
@@ -33,6 +35,7 @@ const steps: Protocol = {
     },
   ],
 };
+export const protocols: ReadonlyArray<Protocol> = [safeProtocol];
 type PillProps = {
   category: string;
   index: number;
@@ -52,18 +55,24 @@ const Pill: React.FunctionComponent<PillProps> = ({ category, index }) => {
     </div>
   );
 };
-export const Protocol: React.FunctionComponent = () => {
+export const Protocol: React.FunctionComponent<{ slug: string }> = ({
+  slug,
+}) => {
   const [activeIndex] = useState(0);
+  const protocol = protocols.find((protocol) => protocol.slug === slug);
+  if (protocol === undefined) {
+    return "not found";
+  }
   return (
     <>
-      <h1>{steps.title}</h1>
-      <p>{steps.description}</p>
+      <h1>{protocol.title}</h1>
+      <p>{protocol.description}</p>
       <div style={{ display: "flex" }}>
-        {steps.categories.map((category, index) => (
+        {protocol.categories.map((category, index) => (
           <Pill category={category} index={index} />
         ))}
       </div>
-      {steps.steps.map((step, index) => {
+      {protocol.steps.map((step, index) => {
         return (
           <Card
             title={step.title}
