@@ -153,11 +153,41 @@ const baseProtocol: Protocol = {
       description:
         "If you have friends on the platform, ask them. Otherwise here are a few: ft-s8i5r6ql, ft-40uhiuwa, ft-r8r4mnnx",
     },
-    { title: "Connext your Twitter" },
+    { title: "Connect your Twitter" },
     {
       title: "Purchase Keys",
       description:
         "By owning a key, you get access to someone's chat room. This is the most important part of the platform!",
+    },
+  ],
+};
+const acrossProtocol: Protocol = {
+  slug: "across",
+  title: "Bridge with UMA's Across Protocol",
+  categories: ["DeFi", "Bridge"],
+  description:
+    "Across is the fastest, cheapest and most secure cross-chain bridge for Ethereum, Arbitrum, Optimism, Polygon and other Layer 1 and Layer 2 networks.",
+  steps: [
+    {
+      title: "Open The Website",
+      href: "https://across.to/bridge",
+    },
+    {
+      title: 'Enter quantity in "Send"',
+      description: "However much you're comfortable with. No more, no less!",
+    },
+    {
+      title: 'Select "Ethereum Mainnet" in "From"',
+      description: 'If you prefer a different "From" be my guest! Yes Chef!',
+    },
+    {
+      title: 'Select "Arbitrum One" in "To"',
+      description: 'If you prefer a different "To" be my guest! Yes Chef!',
+    },
+    {
+      title: "Confirm Transaction!",
+      description:
+        "You've made a swap on the most secure bridge! Wait for success in style with a coffee ☕️",
     },
   ],
 };
@@ -168,6 +198,7 @@ export const protocols: ReadonlyArray<Protocol> = [
   ghoProtocol,
   ipfsProtocol,
   baseProtocol,
+  acrossProtocol,
 ];
 type PillProps = {
   category: string;
