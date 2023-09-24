@@ -64,7 +64,7 @@ type PillProps = {
   category: string;
   index: number;
 };
-const colorOptions = ["#A3FFBC", "#C2CCFF", "#FFC2F2"];
+export const colorOptions = ["#A3FFBC", "#C2CCFF", "#FFC2F2"];
 const Pill: React.FunctionComponent<PillProps> = ({ category, index }) => {
   return (
     <div

@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import { protocols } from "../components/Protocol";
+import { colorOptions, protocols } from "../components/Protocol";
 import Link from "next/link";
 
 const Home: NextPage = () => {
@@ -14,16 +14,17 @@ const Home: NextPage = () => {
     >
       <div>
         <Image
-          width={180}
-          height={180}
+          width={160}
+          height={160}
           src={
             "https://em-content.zobj.net/source/apple/354/man-cook-light-skin-tone_1f468-1f3fb-200d-1f373.png"
           }
         />
-        <br />
       </div>
-      <div>
-        {protocols.map((protocol) => {
+      <br />
+      <>
+        <h2>Latest Recipes</h2>
+        {protocols.map((protocol, index) => {
           return (
             <Link href={`/recipe/${protocol.slug}`}>
               <div
@@ -31,16 +32,25 @@ const Home: NextPage = () => {
                   borderRadius: "16px",
                   border: "1px solid black",
                   display: "inline-block",
-                  padding: "0px 20px",
+                  margin: "0px 20px",
+                  // padding: "0px 20px",
                   cursor: "pointer",
                 }}
               >
-                <h2>{protocol.title}</h2>
+                <div
+                  style={{
+                    height: "80px",
+                    borderTopLeftRadius: "16px",
+                    borderTopRightRadius: "16px",
+                    backgroundColor: colorOptions[index],
+                  }}
+                />
+                <h2 style={{ padding: "0px 30px" }}>{protocol.title}</h2>
               </div>
             </Link>
           );
         })}
-      </div>
+      </>
     </div>
   );
 };
