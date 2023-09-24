@@ -37,22 +37,25 @@ const safeProtocol: Protocol = {
 };
 const uniswapProtocol: Protocol = {
   slug: "uniswap",
-  title: "Swap on-chain",
+  title: "Swap your first tokens on Celo",
   categories: ["celo", "DeFi", "solo"],
   description: "Celo",
   steps: [
     {
-      title: "Create a Gnosis SAFE account",
-      href: "https://app.safe.global/new-safe/create?chain=eth",
+      title: "Switch the network to Celo",
+      href: "https://chainlist.org/chain/42220",
     },
     {
-      title: "Add 2+ of your wallet addresses to the account",
+      title: 'Select WETH in "You Pay"',
+      description: "WETH is wrapped Ether.",
+      href: "https://app.uniswap.org/swap?chain=celo",
     },
     {
-      title: "Save and create the SAFE",
+      title: 'Select CELO in "You Receive"',
+      href: "https://app.uniswap.org/swap?chain=celo",
     },
     {
-      title: "Send a test transaction",
+      title: "Swap!",
     },
   ],
 };
