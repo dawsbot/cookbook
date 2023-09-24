@@ -35,7 +35,31 @@ const safeProtocol: Protocol = {
     },
   ],
 };
-export const protocols: ReadonlyArray<Protocol> = [safeProtocol];
+const uniswapProtocol: Protocol = {
+  slug: "uniswap",
+  title: "Swap on-chain",
+  categories: ["celo", "DeFi", "solo"],
+  description: "Celo",
+  steps: [
+    {
+      title: "Create a Gnosis SAFE account",
+      href: "https://app.safe.global/new-safe/create?chain=eth",
+    },
+    {
+      title: "Add 2+ of your wallet addresses to the account",
+    },
+    {
+      title: "Save and create the SAFE",
+    },
+    {
+      title: "Send a test transaction",
+    },
+  ],
+};
+export const protocols: ReadonlyArray<Protocol> = [
+  safeProtocol,
+  uniswapProtocol,
+];
 type PillProps = {
   category: string;
   index: number;
