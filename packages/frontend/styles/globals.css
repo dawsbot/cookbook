@@ -25,6 +25,7 @@ button {
   padding: 20px;
   margin: 20px;
   min-width: 300px;
+  max-width: 500px;
 }
 
 .header {
