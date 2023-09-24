@@ -20,7 +20,7 @@ button {
 }
 
 .card {
-  border: 2px solid purple;
+  border: 1px solid black;
   border-radius: 12px;
   padding: 20px;
   margin: 20px;
@@ -30,4 +30,8 @@ button {
 .header {
   font-size: 20px;
   font-weight: bold;
+}
+
+.disabled {
+  opacity: 40%;
 }
