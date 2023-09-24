@@ -18,3 +18,16 @@ a {
 button {
   cursor: pointer;
 }
+
+.card {
+  border: 2px solid purple;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  min-width: 300px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: bold;
+}
